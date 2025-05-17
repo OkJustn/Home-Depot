@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Depot Catalog</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxt46-qyLixUksLTQprXoZk4p1xXKNHSTtHw&s">
+    </head>
+    <body>
+        <div id="header">
+            <table>
+                <tr>
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxt46-qyLixUksLTQprXoZk4p1xXKNHSTtHw&s" alt="Home Depot Logo" style="width: 100px; height: 100px;">
+                    </td>
+                    <td>
+                        <h1 id="title">Home Depot</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="mainWrapper">
+            <h2>About us</h2>
+            <p>Founded in 1978, The Home Depot is the world’s largest home improvement retailer, serving millions of DIY customers, professional contractors, and installation service providers. With thousands of stores across North America and a robust online presence, we offer a wide range of products, including building materials, tools, appliances, and home décor. We are committed to excellent customer service, everyday value, and supporting the communities we serve.</p>
+            
+            <h2>What We Do</h2>
+            <p>At Home Depot, we empower homeowners, renters, and professionals to complete their projects successfully. We provide:</p>
+            <ul>
+                <li>A vast selection of quality home improvement products</li>
+                <li>Tool and truck rental services</li>
+                <li>Installation services for flooring, windows, kitchens, and more</li>
+                <li>Expert advice and project guidance in-store and online</li>
+                <li>A strong Pro customer program for contractors and businesses</li>
+            </ul>
+
+            <h2>Mission</h2>
+            <p>To provide the highest level of service, the broadest selection of products, and the most competitive prices.
+                We aim to build strong relationships with our customers by delivering value, convenience, and trustworthy solutions for every project.</p>
+            
+            <h2>Vision</h2>
+            <p>To be the number one destination for home improvement across North America, driven by innovation, customer service, and a commitment to excellence.
+                We envision a future where every customer feels confident and supported in creating their ideal living space.</p>
+
+            <h2>Disclaimer</h2>
+            <p>This site is not affiliated with Home Depot. It is a parody site created for use as a test case scenario for a system under development.</p>
+        </div>
+
+        <!-- Flowise Chatbot Implementation -->
+        <script type="module">
+            import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+            let openMenu = false;
+            Chatbot.init({
+                chatflowid: "31707049-53d1-4ff5-8de2-922826e7e15e",
+                apiHost: "flowise.agaransolutions.com",
+                chatflowConfig: {
+                    /* Optional Chatflow Config */
+                },
+                observersConfig: {
+                    /* Optional Observers Config */
+                },
+                theme: {
+                    /* Theme Config */
+                    button: {
+                        backgroundColor: '#E85201',
+                        right: 20,
+                        bottom: 20,
+                        size: 50,
+                        dragAndDrop: false,
+                        iconColor: 'white',
+                        customIconSrc: 'https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-chat-icon-png-image_889463.jpg',
+                        autoWindowOpen: {
+                            autoOpen: false,
+                            openDelay: 2,
+                            autoOpenOnMobile: false
+                        }
+                    },
+                    tooltip: {
+                        showTooltip: false,
+                        tooltipMessage: 'Hi There 👋!',
+                        tooltipBackgroundColor: 'black',
+                        tooltipTextColor: 'white',
+                        tooltipFontSize: 16
+                    },
+                    disclaimer: {
+                        title: 'Disclaimer',
+                        message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://www.cwhomedepot.com/index.php/c_home/terms_and_conditions\">Terms & Condition</a>",
+                        textColor: 'black',
+                        buttonColor: '#E85201',
+                        buttonText: 'Start Chatting',
+                        buttonTextColor: 'white',
+                        blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                        backgroundColor: 'white'
+                    },
+                    customCSS: `img.rounded-full.object-cover.w-full.h-full {
+                                    width: 30px !important;
+                                    height: 30px !important;
+                                }
+                                div.flex.flex-row.justify-start.mb-2.items-start.host-container {
+                                    margin-top: 20px !important;
+                                    margin-bottom: 20px !important;
+                                }
+                                div.fixed.sm:right-5.rounded-lg.w-full.sm:w-[400px].max-h-[704px].opacity-1.bottom-78px {
+                                    bottom: 30px !important;
+                                    right: 20px !important;
+                                }
+                                div.mb-2.ml-2.border.rounded-lg.shadow-sm.overflow-hidden {
+                                    position: absolute;
+                                    visibility: hidden;
+                                }`,
+                    chatWindow: {
+                        showTitle: true,
+                        showAgentMessages: true,
+                        title: 'Home Depot Assistant',
+                        titleAvatarSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxt46-qyLixUksLTQprXoZk4p1xXKNHSTtHw&s',
+                        welcomeMessage: 'Hello and Welcome to the Home Depot Website! My name is Hackabot, how may I be of service?',
+                        errorMessage: "I'm sorry, I seem to be having trouble right now. Please try again later. Thank you!",
+                        backgroundColor: '#FFF',
+                        backgroundImage: 'enter image path or link',
+                        height: 680,
+                        width: 400,
+                        fontSize: 16,
+                        starterPrompts: [
+                            "Who are you?",
+                            "I need to access my account information",
+                            "Can I see your available stock?"
+                        ],
+                        starterPromptFontSize: 15,
+                        clearChatOnReload: false,
+                        sourceDocsTitle: 'Sources:',
+                        renderHTML: true,
+                        botMessage: {
+                            backgroundColor: '#f7f8ff',
+                            textColor: '#303235',
+                            showAvatar: true,
+                            avatarSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxt46-qyLixUksLTQprXoZk4p1xXKNHSTtHw&s'
+                        },
+                        userMessage: {
+                            backgroundColor: '#E85201',
+                            textColor: '#ffffff',
+                            showAvatar: true,
+                            avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png',
+                            avatarSize: 10
+                        },
+                        textInput: {
+                            placeholder: 'Type your question',
+                            backgroundColor: '#fff',
+                            textColor: '#000',
+                            sendButtonColor: '#E85201',
+                            maxChars: 100,
+                            maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 100 characters.',
+                            autoFocus: true,
+                            sendMessageSound: true,
+                            sendSoundLocation: 'send_message.mp3',
+                            receiveMessageSound: true,
+                            receiveSoundLocation: 'receive_message.mp3'
+                        },
+                        feedback: {
+                            color: '#E85201'
+                        },
+                        dateTimeToggle: {
+                            date: true,
+                            time: true,
+                            textColor: '#fff'
+                        },
+                        footer: {
+                            textColor: '#000',
+                            text: 'Powered by',
+                            company: 'Home Depot',
+                            companyLink: 'https://www.cwhomedepot.com/'
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
